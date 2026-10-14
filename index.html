@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sunshine Physiotherapy | Physiotherapy in Victoria Falls &amp; Hwange</title>
+<meta name="description" content="Personalized physiotherapy and rehabilitation in Victoria Falls and Hwange, Zimbabwe. Evidence-informed care for back pain, sports injuries, post-surgery recovery, neurological rehabilitation and mobility challenges.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root{
+    --sun-white:#FFFFFF;
+    --sun-bg:#FFFFFF;
+    --sun-lime:#84CC16;
+    --sun-lime-dark:#5f9310;
+    --sun-blue:#2563EB;
+    --sun-blue-dark:#1d4fc4;
+    --sun-deep:#0F172A;
+    --sun-ink:#101826;
+    --sun-ink-soft:#54607A;
+    --sun-border:#E5E9F0;
+    --sun-card:#FFFFFF;
+    --sun-surface-tint:#F3F6FB;
+    --radius-card:1rem;
+    --radius-btn:.65rem;
+  }
+  html{scroll-behavior:smooth;color-scheme:light;}
+  *{box-sizing:border-box;}
+  body{
+    background:var(--sun-bg);
+    color:var(--sun-ink);
+    font-family:'Inter',system-ui,-apple-system,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .font-display{font-family:'Fraunces',Georgia,serif;}
+  ::selection{background:var(--sun-lime);color:var(--sun-deep);}
+  a,button{-webkit-tap-highlight-color:transparent;}
+  :focus-visible{outline:3px solid var(--sun-lime);outline-offset:2px;border-radius:4px;}
+  .container-px{padding-left:1.25rem;padding-right:1.25rem;}
+  @media(min-width:768px){.container-px{padding-left:2.5rem;padding-right:2.5rem;}}
+  @media(min-width:1280px){.container-px{padding-left:5rem;padding-right:5rem;}}
+  .wrap{max-width:1280px;margin-left:auto;margin-right:auto;}
+  section{scroll-margin-top:88px;}
+
+  /* nav */
+  .site-nav{background:rgba(255,255,255,.92);backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--sun-border);}
+  .nav-link{position:relative;color:var(--sun-ink-soft);font-weight:500;font-size:.95rem;}
+  .nav-link:hover{color:var(--sun-deep);}
+  .nav-link::after{content:'';position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--sun-lime);transform:scaleX(0);transform-origin:left;transition:transform .2s ease;}
+  .nav-link:hover::after{transform:scaleX(1);}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-weight:600;border-radius:var(--radius-btn);padding:.8rem 1.4rem;transition:transform .15s ease, box-shadow .15s ease, background .15s ease, border-color .15s ease;white-space:nowrap;min-height:44px;font-size:.95rem;}
+  .btn:active{transform:translateY(1px);}
+  .btn-sm{padding:.6rem 1rem;font-size:.85rem;min-height:38px;}
+  .btn-primary{background:var(--sun-blue);color:#fff;box-shadow:0 6px 16px -6px rgba(37,99,235,.5);}
+  .btn-primary:hover{background:var(--sun-blue-dark);}
+  .btn-lime{background:var(--sun-lime);color:var(--sun-deep);}
+  .btn-lime:hover{background:var(--sun-lime-dark);color:#fff;}
+  .btn-whatsapp{background:#25D366;color:#fff;}
+  .btn-whatsapp:hover{background:#1DB855;}
+  .btn-outline{border:1.5px solid var(--sun-border);color:var(--sun-ink);background:transparent;}
+  .btn-outline:hover{border-color:var(--sun-blue);color:var(--sun-blue);}
+  .btn-outline-white{border:1.5px solid rgba(255,255,255,.4);color:#fff;background:rgba(255,255,255,.05);}
+  .btn-outline-white:hover{background:rgba(255,255,255,.15);border-color:#fff;}
+  .btn-text{color:var(--sun-blue);font-weight:600;font-size:.9rem;display:inline-flex;align-items:center;gap:.3rem;}
+  .btn-text svg{transition:transform .18s ease;}
+  .btn-text:hover svg{transform:translateX(3px);}
+
+  .card{background:var(--sun-card);border:1px solid var(--sun-border);border-radius:var(--radius-card);}
+  .shadow-soft{box-shadow:0 1px 2px rgba(15,23,42,.03), 0 10px 24px -18px rgba(15,23,42,.16);}
+  .icon-tile{width:2.75rem;height:2.75rem;border-radius:.65rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+
+  .eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.8rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--sun-blue-dark);}
+  .eyebrow-dot{width:7px;height:7px;border-radius:999px;background:var(--sun-lime);flex-shrink:0;}
+
+  .badge-coming-soon{display:inline-flex;align-items:center;gap:.35rem;font-size:.72rem;font-weight:600;color:var(--sun-ink-soft);background:var(--sun-surface-tint);border:1px dashed var(--sun-border);padding:.28rem .6rem;border-radius:999px;}
+
+  /* placeholder photo block */
+  .photo-placeholder{position:relative;background:linear-gradient(155deg, var(--sun-surface-tint), #EAF0FA);border:1px solid var(--sun-border);border-radius:var(--radius-card);display:flex;align-items:center;justify-content:center;overflow:hidden;}
+  .photo-placeholder .ph-tag{position:absolute;bottom:.6rem;left:.6rem;font-size:.68rem;font-weight:600;background:rgba(255,255,255,.92);color:var(--sun-ink-soft);padding:.28rem .55rem;border-radius:999px;border:1px solid var(--sun-border);}
+
+  .hero-rise{opacity:0;transform:translateY(16px);animation:rise .65s cubic-bezier(.2,.7,.2,1) forwards;}
+  @keyframes rise{to{opacity:1;transform:translateY(0);}}
+  @media (prefers-reduced-motion: reduce){
+    .hero-rise{animation:none;opacity:1;transform:none;}
+    html{scroll-behavior:auto;}
+  }
+
+  .discover-card{transition:border-color .2s ease, box-shadow .2s ease, transform .2s ease;}
+  .discover-card:hover{border-color:var(--sun-blue);transform:translateY(-2px);}
+
+  .accordion-btn[aria-expanded="true"] .chev{transform:rotate(180deg);}
+  .accordion-panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s ease;}
+  .accordion-panel.open{grid-template-rows:1fr;}
+  .accordion-panel > div{overflow:hidden;}
+
+  .kpi-ring{transform:rotate(-90deg);}
+  .kpi-ring circle{transition:stroke-dashoffset 1.2s ease;}
+
+  @media(max-width:767px){.m-hide{display:none !important;}}
+  #about-mobile-sections > section{border-top:1px solid var(--sun-border);}
+  .page{display:none;}
+  .page.active{display:block;}
+
+  .decorative-ray{position:absolute;border-radius:999px;background:var(--sun-lime);opacity:.10;pointer-events:none;}
+
+  input,select,textarea{background:var(--sun-white);border:1.5px solid var(--sun-border);border-radius:.55rem;padding:.7rem .9rem;color:var(--sun-ink);width:100%;font-size:.95rem;min-height:44px;}
+  textarea{min-height:auto;}
+  input:focus,select:focus,textarea:focus{border-color:var(--sun-blue);}
+  label{font-size:.83rem;font-weight:600;color:var(--sun-ink-soft);display:block;margin-bottom:.3rem;}
+
+  .org-connector{width:2px;background:var(--sun-border);height:2rem;margin:0 auto;}
+  .logo-mark{height:40px;width:auto;display:block;}
+  .skip-link{position:absolute;left:-999px;top:0;background:var(--sun-blue);color:#fff;padding:.6rem 1rem;border-radius:.5rem;z-index:100;}
+  .skip-link:focus{left:1rem;top:1rem;}
+
+  /* floating whatsapp button (all breakpoints) */
+  #fab-whatsapp{position:fixed;right:1.25rem;bottom:1.25rem;z-index:40;width:56px;height:56px;border-radius:999px;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px -8px rgba(37,211,102,.55);}
+  @media(min-width:768px){#fab-whatsapp{right:1.75rem;bottom:1.75rem;}}
+
+  .team-bio-panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s ease;}
+  .team-bio-panel.open{grid-template-rows:1fr;}
+  .team-bio-panel>div{overflow:hidden;}
+</style>
+</head>
+<body class="antialiased">
+<a href="#main" class="skip-link">Skip to content</a>
+
+<script>
+  window.BOOKING_URL = window.BOOKING_URL || null;
+  window.WHATSAPP_URL = window.WHATSAPP_URL || null;
+</script>
+
+<!-- ========================= NAVIGATION ========================= -->
+<header class="site-nav fixed top-0 left-0 right-0 z-50">
+  <nav class="wrap container-px flex items-center justify-between h-[72px]" aria-label="Primary">
+    <a href="#/" data-route="/" class="flex items-center gap-2" aria-label="Sunshine Physiotherapy — home">
+      <img src="data:image/webp;base64,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" alt="Sunshine Physiotherapy logo" class="logo-mark" width="150" height="40">
+    </a>
+    <ul class="hidden lg:flex items-center gap-8" id="desktop-nav">
+      <li><a href="#services" data-route="/" data-anchor="services" class="nav-link">Services</a></li>
+      <li><a href="#team" data-route="/" data-anchor="team" class="nav-link">Our Team</a></li>
+      <li><a href="#locations" data-route="/" data-anchor="locations" class="nav-link">Locations</a></li>
+      <li><a href="#/about" data-route="/about" class="nav-link">About</a></li>
+      <li><a href="#faq" data-route="/" data-anchor="faq" class="nav-link">FAQ</a></li>
+    </ul>
+    <button id="mobile-toggle" class="lg:hidden p-2 -mr-2" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg id="icon-burger" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </nav>
+  <div id="mobile-menu" class="lg:hidden hidden border-t" style="border-color:var(--sun-border);background:var(--sun-white);">
+    <ul class="flex flex-col p-5 gap-1">
+      <li><a href="#locations" data-route="/" data-anchor="locations" class="mobile-link block py-3 font-medium">Locations</a></li>
+      <li><a href="#/about" data-route="/about" class="mobile-link block py-3 font-medium">About Us</a></li>
+      <li><a href="#faq" data-route="/" data-anchor="faq" class="mobile-link block py-3 font-medium">FAQs</a></li>
+    </ul>
+    <div class="p-5 pt-2 flex flex-col gap-3" style="border-top:1px solid var(--sun-border);">
+      <button class="btn btn-whatsapp w-full mobile-whatsapp-btn">WhatsApp Us</button>
+      <button class="btn btn-primary w-full mobile-book-btn">Book Appointment</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ========================= HOME PAGE ========================= -->
+<div class="page" id="page-home">
+
+  <!-- HERO -->
+  <section class="relative pt-[104px] pb-14 md:pb-20 overflow-hidden">
+    <div class="decorative-ray" style="width:320px;height:320px;top:-140px;right:-100px;"></div>
+    <div class="wrap container-px grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-16 items-center relative">
+      <div>
+        <h1 class="hero-rise font-display text-4xl md:text-5xl xl:text-[3.3rem] leading-[1.1] font-semibold" style="color:var(--sun-deep);animation-delay:.15s;">
+          Move better. Recover stronger. Live fully.
+        </h1>
+        <p class="hero-rise mt-6 text-lg leading-relaxed max-w-xl" style="color:var(--sun-ink-soft);animation-delay:.25s;">
+          Personalized physiotherapy and rehabilitation for pain, injuries, mobility challenges and recovery — with care in Victoria Falls and Hwange.
+        </p>
+        <div class="hero-rise mt-9 flex flex-wrap gap-4" style="animation-delay:.35s;">
+          <button class="btn btn-primary text-base px-7" id="hero-book-btn">Book an Appointment</button>
+          <button class="btn btn-whatsapp text-base px-7" id="hero-whatsapp-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.33 4.95L2 22l5.28-1.38a9.9 9.9 0 0 0 4.76 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.86 9.86 0 0 0 12.04 2zm5.8 14.14c-.24.68-1.4 1.31-1.93 1.36-.49.05-1.06.24-3.59-.75-3.02-1.19-4.96-4.28-5.11-4.48-.15-.2-1.22-1.62-1.22-3.09 0-1.47.77-2.19 1.05-2.49.27-.3.6-.37.8-.37.2 0 .4 0 .58.01.19.01.44-.07.68.53.25.6.85 2.07.92 2.22.07.15.12.33.02.53-.1.2-.15.32-.3.49-.15.17-.31.39-.44.52-.15.15-.3.31-.13.6.17.3.77 1.27 1.65 2.06 1.14 1.02 2.1 1.34 2.4 1.49.3.15.48.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.73.82 2.03.97.3.15.49.22.57.35.07.13.07.75-.17 1.43z"/></svg>
+            WhatsApp Us
+          </button>
+        </div>
+        <p class="hero-rise mt-6 text-sm italic" style="color:var(--sun-ink-soft);animation-delay:.4s;">"Your quality of life is our concern."</p>
+      </div>
+
+      <div class="hero-rise relative" style="animation-delay:.3s;">
+        <div class="photo-placeholder aspect-[4/5] w-full max-w-md mx-auto">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--sun-blue)" stroke-width="1.4" opacity=".55"><circle cx="9" cy="7" r="3.2"/><path d="M2.5 20c.7-3.6 3.3-5.6 6.5-5.6s5.8 2 6.5 5.6"/><circle cx="18" cy="8.5" r="2.2"/><path d="M14.8 13.2c1-.9 2.2-1.4 3.2-1.4 2.3 0 4.2 1.6 4.8 4.4"/></svg>
+          <span class="ph-tag">Physiotherapist &amp; patient photo — coming soon</span>
+        </div>
+        <div class="absolute -bottom-5 -left-5 card shadow-soft px-5 py-4 hidden sm:flex items-center gap-3" style="max-width:15rem;">
+          <div class="icon-tile" style="background:var(--sun-surface-tint);color:var(--sun-blue);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.6-9.5-9C.9 7.3 3 3.5 7 3.5c2.4 0 4 1.6 5 3 1-1.4 2.6-3 5-3 4 0 6.1 3.8 4.5 7.5C19 15.4 12 21 12 21z"/></svg>
+          </div>
+          <p class="text-sm font-medium leading-snug" style="color:var(--sun-deep);">Care from your first assessment to full recovery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <section style="background:var(--sun-surface-tint);border-top:1px solid var(--sun-border);border-bottom:1px solid var(--sun-border);">
+    <div class="wrap container-px py-6 flex flex-wrap justify-center gap-x-8 gap-y-3">
+      <span class="flex items-center gap-2 text-sm font-semibold" style="color:var(--sun-deep);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5f9310" stroke-width="2.6"><path d="M20 6 9 17l-5-5"/></svg>Licensed Physiotherapists</span>
+      <span class="flex items-center gap-2 text-sm font-semibold" style="color:var(--sun-deep);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5f9310" stroke-width="2.6"><path d="M20 6 9 17l-5-5"/></svg>Evidence-Based Care</span>
+      <span class="flex items-center gap-2 text-sm font-semibold" style="color:var(--sun-deep);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5f9310" stroke-width="2.6"><path d="M20 6 9 17l-5-5"/></svg>Personalized Recovery Plans</span>
+      <span class="flex items-center gap-2 text-sm font-semibold" style="color:var(--sun-deep);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5f9310" stroke-width="2.6"><path d="M20 6 9 17l-5-5"/></svg>Victoria Falls + Hwange</span>
+    </div>
+  </section>
+
+  <!-- WHAT BRINGS YOU IN TODAY -->
+  <section class="py-16 md:py-20">
+    <div class="wrap container-px">
+      <div class="max-w-2xl">
+        <h2 class="font-display text-3xl md:text-4xl font-semibold" style="color:var(--sun-deep);">What brings you in today?</h2>
+        <p class="mt-4 text-lg" style="color:var(--sun-ink-soft);">Whether you're recovering from an injury, managing pain or working to regain your mobility, we're here to help.</p>
+      </div>
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="discover-grid"></div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="py-16 md:py-20" style="background:var(--sun-surface-tint);" id="services">
+    <div class="wrap container-px">
+      <div class="max-w-2xl">
+        <h2 class="font-display text-3xl md:text-4xl font-semibold" style="color:var(--sun-deep);">Physiotherapy designed around you</h2>
+        <p class="mt-4 text-lg" style="color:var(--sun-ink-soft);">Your treatment is built around your assessment, your goals and your stage of recovery.</p>
+      </div>
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5" id="services-grid"></div>
+    </div>
+  </section>
+
+  <!-- WHY SUNSHINE -->
+  <section class="py-16 md:py-20">
+    <div class="wrap container-px">
+      <div class="max-w-2xl">
+        <h2 class="font-display text-3xl md:text-4xl font-semibold" style="color:var(--sun-deep);">Why choose Sunshine Physiotherapy?</h2>
+        <p class="mt-4 text-lg" style="color:var(--sun-ink-soft);">Answering the question every patient asks: why trust us with your recovery?</p>
+      </div>
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="why-grid"></div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="py-16 md:py-20" style="background:var(--sun-surface-tint);" id="team">
+    <div class="wrap container-px">
+      <div class="max-w-2xl">
+        <h2 class="font-display text-3xl md:text-4xl font-semibold" style="color:var(--sun-deep);">Meet Your Physiotherapist</h2>
+        <p class="mt-4 text-lg" style="color:var(--sun-ink-soft);">Real Sunshine physiotherapists, based in Victoria Falls and Hwange. Full profile photos and biographies are being added.</p>
+      </div>
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6" id="team-grid"></div>
+    </div>
+  </section>
+
+  <!-- RECOVERY JOURNEY -->
+  <section class="py-16 md:py-20" id="recovery">
+    <div class="wrap container-px">
+      <div class="max-w-2xl">
+        <h2 class="font-display text-3xl md:text-4xl font-semibold" style="color:var(--sun-deep);">Your recovery. Your progress. Your journey.</h2>
+        <p class="mt-4 text-lg" style="color:var(--sun-ink-soft);">Your progress doesn't stop when you leave the clinic. Sunshine helps you understand how you're recovering and stay connected to your treatment plan.</p>
+      </div>
+
+      <div class="mt-10 card shadow-soft p-5 md:p-8 relative overflow-hidden">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+          <span class="badge-coming-soon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Coming soon: Your Sunshine Patient Dashboard</span>
+          <span class="text-xs font-semibold px-3 py-1 rounded-full" style="background:#EEF3FB;color:var(--sun-blue-dark);">Demo data — for illustration only</span>
+        </div>
+        <div class="grid lg:grid-cols-3 gap-5">
+
+          <div class="lg:col-span-2 card p-5 md:p-6" style="background:var(--sun-surface-tint);border:none;">
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <p class="text-sm font-semibold" style="color:var(--sun-ink-soft);">Pain Score</p>
+                <p class="text-2xl font-display font-semibold" style="color:var(--sun-deep);">Trending down</p>
+              </div>
+              <span class="text-xs font-semibold px-3 py-1 rounded-full" style="background:#DCFCE7;color:#166534;">Demo: −75% since session 1</span>
+            </div>
+            <svg viewBox="0 0 560 200" class="w-full h-auto" id="pain-chart" role="img" aria-label="Demo line chart showing pain score decreasing from 8 out of 10 at session 1 to 2 out of 10 at session 8"></svg>
+            <div class="flex justify-between text-xs mt-1" style="color:var(--sun-ink-soft);">
+              <span>Session 1</span><span>Session 8</span>
+            </div>
+          </div>
+
+          <div class="card p-6 flex flex-col items-center justify-center text-center" style="background:var(--sun-surface-tint);border:none;">
+            <svg class="kpi-ring" width="130" height="130" viewBox="0 0 140 140">
+              <circle cx="70" cy="70" r="58" fill="none" stroke="var(--sun-border)" stroke-width="12"/>
+              <circle id="kpi-circle" cx="70" cy="70" r="58" fill="none" stroke="#2563EB" stroke-width="12" stroke-linecap="round" stroke-dasharray="364" stroke-dashoffset="364"/>
+            </svg>
+            <p class="font-display text-3xl font-semibold -mt-[86px]" style="color:var(--sun-deep);" id="kpi-label">0%</p>
+            <p class="text-sm font-semibold mt-16" style="color:var(--sun-ink-soft);">Overall Recovery Progress</p>
+          </div>
+
+          <div class="card p-6" style="background:var(--sun-surface-tint);border:none;">
+            <p class="text-sm font-semibold" style="color:var(--sun-ink-soft);">Mobility Improvement</p>
+            <div class="flex items-end gap-2 mt-3">
+              <span class="font-display text-3xl font-semibold" style="color:var(--sun-deep);">78%</span>
+              <span class="text-xs mb-1" style="color:var(--sun-ink-soft);">from 40% baseline</span>
+            </div>
+            <div class="mt-4 h-2.5 rounded-full overflow-hidden" style="background:var(--sun-border);">
+              <div class="h-full rounded-full" style="width:78%;background:var(--sun-lime);"></div>
+            </div>
+          </div>
+
+          <div class="card p-6" style="background:var(--sun-surface-tint);border:none;">
+            <p class="text-sm font-semibold" style="color:var(--sun-ink-soft);">Session Completion</p>
+            <p class="font-display text-3xl font-semibold mt-3" style="color:var(--sun-deep);">9 <span class="text-lg font-sans font-medium" style="color:var(--sun-ink-soft);">/ 12 planned</span></p>
+            <div class="flex gap-1.5 mt-4" aria-hidden="true">
+              <div class="h-2.5 flex-1 rounded-full" style="background:#84CC16;"></div><div class="h-2.5 flex-1 rounded-full" style="background:#84CC16;"></div><div class="h-2.5 flex-1 rounded-full" style="background:#84CC16;"></div><div class="h-2.5 flex-1 rounded-full" style="background:#84CC16;"></div><div class="h-2.5 flex-1 rounded-full" style="background:#84CC16;"></div><div class="h-2.5 flex-1 rounded-full" style="background:#84CC16;"></div><div class="h-2.5 flex-1 rounded-full" style="background:#84CC16;"></div><div class="h-2.5 flex-1 rounded-full" style="background:#84CC16;"></div><div class="h-2.5 flex-1 rounded-full" style="background:#84CC16;"></div><div class="h-2.5 flex-1 rounded-full" style="background:var(--sun-border);"></div><div class="h-2.5 flex-1 rounded-full" style="background:var(--sun-border);"></div><div class="h-2.5 flex-1 rounded-full" style="background:var(--sun-border);"></div>
+            </div>
+          </div>
+
+          <div class="card p-6" style="background:var(--sun-surface-tint);border:none;">
+            <p class="text-sm font-semibold" style="color:var(--sun-ink-soft);">Functional Improvement</p>
+            <p class="font-display text-3xl font-semibold mt-3" style="color:var(--sun-deep);">+62%</p>
+            <p class="text-xs mt-1" style="color:var(--sun-ink-soft);">Demo functional movement score vs. initial assessment</p>
+            <span class="inline-block mt-3 text-xs font-semibold px-3 py-1 rounded-full" style="background:#DBEAFE;color:#1E40AF;">On track</span>
+          </div>
+
+          <div class="lg:col-span-3 card p-6" style="background:var(--sun-surface-tint);border:none;">
+            <p class="text-sm font-semibold mb-5" style="color:var(--sun-ink-soft);">Recovery Milestones</p>
+            <div class="grid sm:grid-cols-5 gap-4" id="milestones-grid"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATIONS -->
+  <section class="py-16 md:py-20" style="background:var(--sun-surface-tint);" id="locations">
+    <div class="wrap container-px">
+      <div class="max-w-2xl">
+        <h2 class="font-display text-3xl md:text-4xl font-semibold" style="color:var(--sun-deep);">Visit Sunshine Physiotherapy</h2>
+        <p class="mt-4 text-lg" style="color:var(--sun-ink-soft);">Two clinics across Zimbabwe, ready to welcome you.</p>
+      </div>
+      <div class="mt-10 grid lg:grid-cols-2 gap-6" id="locations-grid"></div>
+    </div>
+  </section>
+
+  <!-- PATIENT STORIES -->
+  <section class="py-16 md:py-20">
+    <div class="wrap container-px">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="font-display text-3xl md:text-4xl font-semibold" style="color:var(--sun-deep);">Stories from real patients — coming soon</h2>
+        <p class="mt-4 text-lg" style="color:var(--sun-ink-soft);">We're gathering real recovery stories from patients in Victoria Falls and Hwange. We only publish genuine, consented patient experiences.</p>
+      </div>
+      <div class="mt-10 grid sm:grid-cols-3 gap-5 max-w-4xl mx-auto" aria-hidden="true">
+        <div class="card p-6 flex flex-col gap-3" style="border-style:dashed;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--sun-border)" stroke-width="2"><path d="M7 7h4v6H7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zM15 7h4v6h-4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2z"/></svg>
+          <div class="h-2.5 rounded-full w-4/5" style="background:var(--sun-border);"></div>
+          <div class="h-2.5 rounded-full w-3/5" style="background:var(--sun-border);"></div>
+        </div>
+        <div class="card p-6 flex flex-col gap-3" style="border-style:dashed;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--sun-border)" stroke-width="2"><path d="M7 7h4v6H7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zM15 7h4v6h-4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2z"/></svg>
+          <div class="h-2.5 rounded-full w-4/5" style="background:var(--sun-border);"></div>
+          <div class="h-2.5 rounded-full w-3/5" style="background:var(--sun-border);"></div>
+        </div>
+        <div class="card p-6 flex flex-col gap-3 hidden sm:flex" style="border-style:dashed;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--sun-border)" stroke-width="2"><path d="M7 7h4v6H7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zM15 7h4v6h-4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2z"/></svg>
+          <div class="h-2.5 rounded-full w-4/5" style="background:var(--sun-border);"></div>
+          <div class="h-2.5 rounded-full w-3/5" style="background:var(--sun-border);"></div>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        <button class="btn btn-whatsapp" id="story-whatsapp-btn">Share Your Recovery Story on WhatsApp</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-20" style="background:var(--sun-surface-tint);" id="faq">
+    <div class="wrap container-px max-w-3xl">
+      <h2 class="font-display text-3xl md:text-4xl font-semibold" style="color:var(--sun-deep);">Frequently Asked Questions</h2>
+      <div class="mt-8 flex flex-col gap-3" id="faq-list"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT (homepage summary) -->
+  <section class="py-16 md:py-20 m-hide">
+    <div class="wrap container-px">
+      <div class="max-w-2xl">
+        <h2 class="font-display text-3xl md:text-4xl font-semibold" style="color:var(--sun-deep);">Physiotherapy with people at the centre</h2>
+        <p class="mt-4 text-lg" style="color:var(--sun-ink-soft);">Sunshine Physiotherapy exists to help people move better, recover with confidence and return to the lives they value.</p>
+      </div>
+      <div class="mt-10 grid sm:grid-cols-3 gap-5">
+        <div class="card p-6">
+          <div class="icon-tile mb-3" style="background:var(--sun-surface-tint);color:var(--sun-blue);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+          <h3 class="font-semibold" style="color:var(--sun-deep);">Our Mission</h3>
+          <p class="mt-2 text-sm leading-relaxed" style="color:var(--sun-ink-soft);">To help every patient regain mobility, reduce pain, and return to what matters, through personalized, evidence-informed physiotherapy.</p>
+        </div>
+        <div class="card p-6">
+          <div class="icon-tile mb-3" style="background:var(--sun-surface-tint);color:var(--sun-blue);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <h3 class="font-semibold" style="color:var(--sun-deep);">Our Vision</h3>
+          <p class="mt-2 text-sm leading-relaxed" style="color:var(--sun-ink-soft);">To be a trusted physiotherapy organisation across Zimbabwe, known for accessible, high-quality, patient-centred rehabilitation.</p>
+        </div>
+        <div class="card p-6">
+          <div class="icon-tile mb-3" style="background:var(--sun-surface-tint);color:var(--sun-blue);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.6-9.5-9C.9 7.3 3 3.5 7 3.5c2.4 0 4 1.6 5 3 1-1.4 2.6-3 5-3 4 0 6.1 3.8 4.5 7.5C19 15.4 12 21 12 21z"/></svg></div>
+          <h3 class="font-semibold" style="color:var(--sun-deep);">Our Values</h3>
+          <p class="mt-2 text-sm leading-relaxed" style="color:var(--sun-ink-soft);">Compassion, clinical excellence, and accountability — care built around each patient's goals.</p>
+        </div>
+      </div>
+      <a href="#/about" data-route="/about" class="btn-text mt-8">Learn more about Sunshine <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </section>
+
+  <!-- BOOKING / CONTACT -->
+  <section class="py-16 md:py-20" id="contact">
+    <div class="wrap container-px">
+      <div class="rounded-2xl p-8 md:p-14" style="background:var(--sun-deep);position:relative;overflow:hidden;">
+        <div class="decorative-ray" style="width:260px;height:260px;top:-100px;right:-60px;opacity:.14;"></div>
+        <div class="grid lg:grid-cols-2 gap-12 relative">
+          <div>
+            <h2 class="font-display text-3xl md:text-4xl font-semibold text-white">Ready to start your recovery?</h2>
+            <p class="mt-4 text-lg" style="color:#C7D2E8;">Take the first step toward better movement and a healthier, more active life.</p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <button class="btn btn-lime text-base px-7" id="booking-book-btn">Book Appointment</button>
+              <button class="btn btn-whatsapp text-base px-7" id="booking-whatsapp-btn">WhatsApp Us</button>
+            </div>
+            <div class="mt-10 space-y-3 text-sm" style="color:#C7D2E8;">
+              <p class="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.34 1.78.66 2.61a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.47-1.27a2 2 0 0 1 2.11-.45c.83.32 1.71.54 2.61.66A2 2 0 0 1 22 16.92z"/></svg><span class="badge-coming-soon" style="color:#C7D2E8;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.2);">Phone number coming soon</span></p>
+              <p class="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span class="badge-coming-soon" style="color:#C7D2E8;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.2);">Email coming soon</span></p>
+            </div>
+          </div>
+
+          <div class="card p-6 md:p-8 relative" style="border:none;">
+            <div id="inquiry-form-wrap">
+              <h3 class="font-display text-xl font-semibold" style="color:var(--sun-deep);">Appointment Inquiry</h3>
+              <p class="text-sm mt-1 mb-5" style="color:var(--sun-ink-soft);">We'll get back to you to confirm your appointment.</p>
+              <form id="inquiry-form" class="grid sm:grid-cols-2 gap-4" novalidate>
+                <div class="sm:col-span-2">
+                  <label for="fld-name">Full Name</label>
+                  <input id="fld-name" name="name" type="text" required autocomplete="name">
+                </div>
+                <div>
+                  <label for="fld-phone">Phone Number</label>
+                  <input id="fld-phone" name="phone" type="tel" required autocomplete="tel">
+                </div>
+                <div>
+                  <label for="fld-email">Email</label>
+                  <input id="fld-email" name="email" type="email" required autocomplete="email">
+                </div>
+                <div class="sm:col-span-2">
+                  <label for="fld-reason">Reason for Visit</label>
+                  <textarea id="fld-reason" name="reason" rows="3" required></textarea>
+                </div>
+                <div>
+                  <label for="fld-location">Preferred Location</label>
+                  <select id="fld-location" name="location" required>
+                    <option value="">Select a clinic</option>
+                    <option>Victoria Falls Clinic</option>
+                    <option>Hwange Clinic</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="fld-date">Preferred Date</label>
+                  <input id="fld-date" name="date" type="date" required>
+                </div>
+                <div class="sm:col-span-2 mt-2">
+                  <button type="submit" class="btn btn-primary w-full">Submit Inquiry</button>
+                </div>
+              </form>
+            </div>
+            <div id="inquiry-success" class="hidden text-center py-10" role="status" aria-live="polite">
+              <div class="mx-auto w-16 h-16 rounded-full flex items-center justify-center" style="background:#DCFCE7;">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
+              </div>
+              <h3 class="font-display text-xl font-semibold mt-5" style="color:var(--sun-deep);">Inquiry Received</h3>
+              <p class="text-sm mt-2" style="color:var(--sun-ink-soft);">Thank you — our team will contact you shortly to confirm your appointment.</p>
+              <button class="btn btn-outline mt-6" id="inquiry-reset">Submit another inquiry</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+<!-- ======================= END HOME PAGE ======================= -->
+
+
+<!-- ========================= ABOUT PAGE ========================= -->
+<div class="page" id="page-about">
+
+  <section class="pt-[104px] pb-14 md:pb-16">
+    <div class="wrap container-px max-w-3xl">
+      <h1 class="font-display text-4xl md:text-5xl font-semibold" style="color:var(--sun-deep);">A physiotherapy organisation built around one idea: your quality of life.</h1>
+      <p class="mt-6 text-lg leading-relaxed" style="color:var(--sun-ink-soft);">Sunshine Physiotherapy provides personalized physiotherapy and rehabilitation care across Zimbabwe, currently through clinics in Victoria Falls and Hwange. Our clinical teams work with patients recovering from pain, injury, surgery, and mobility loss — combining hands-on assessment with structured, evidence-informed treatment plans.</p>
+    </div>
+  </section>
+
+  <div id="about-mobile-sections"></div>
+
+  <section class="py-14 md:py-16" style="background:var(--sun-surface-tint);">
+    <div class="wrap container-px grid md:grid-cols-2 gap-5">
+      <div class="card shadow-soft p-8">
+        <h2 class="font-display text-2xl font-semibold" style="color:var(--sun-deep);">Mission</h2>
+        <p class="mt-3" style="color:var(--sun-ink-soft);">To help every patient regain mobility, reduce pain, and return to the activities that matter to them, through personalized, evidence-informed physiotherapy.</p>
+      </div>
+      <div class="card shadow-soft p-8">
+        <h2 class="font-display text-2xl font-semibold" style="color:var(--sun-deep);">Vision</h2>
+        <p class="mt-3" style="color:var(--sun-ink-soft);">To be a trusted physiotherapy organisation across Zimbabwe, known for accessible, high-quality, patient-centred rehabilitation care.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-14 md:py-16">
+    <div class="wrap container-px">
+      <h2 class="font-display text-2xl md:text-3xl font-semibold" style="color:var(--sun-deep);">Core Values</h2>
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-5" id="values-grid"></div>
+    </div>
+  </section>
+
+  <!-- ORG STRUCTURE -->
+  <section class="py-14 md:py-16" style="background:var(--sun-surface-tint);">
+    <div class="wrap container-px">
+      <h2 class="font-display text-2xl md:text-3xl font-semibold" style="color:var(--sun-deep);">Organisational Structure</h2>
+      <p class="mt-3 max-w-2xl" style="color:var(--sun-ink-soft);">Placeholder structure shown below until Sunshine Physiotherapy provides its full organisational chart.</p>
+
+      <div class="mt-10 max-w-md mx-auto text-center">
+        <div class="card shadow-soft p-4 font-semibold" style="color:var(--sun-deep);">Leadership</div>
+        <div class="org-connector"></div>
+        <div class="card shadow-soft p-4 font-semibold" style="color:var(--sun-deep);">Clinical Team</div>
+        <div class="org-connector"></div>
+        <div class="card shadow-soft p-4 font-semibold" style="color:var(--sun-deep);">Administrative &amp; Support Team</div>
+      </div>
+
+      <div class="mt-14">
+        <h3 class="text-sm font-semibold uppercase tracking-wide mb-4" style="color:var(--sun-ink-soft);letter-spacing:.04em;">Leadership</h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="leadership-grid"></div>
+      </div>
+
+      <div class="mt-14 m-hide">
+        <h3 class="text-sm font-semibold mb-4" style="color:var(--sun-ink-soft);">Clinical Team</h3>
+        <p class="text-sm mb-5" style="color:var(--sun-ink-soft);">See full profiles in <a href="#/" data-route="/" data-anchor="team" class="underline" style="color:var(--sun-blue);">Meet Your Physiotherapist</a>.</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5" id="about-clinical-grid"></div>
+      </div>
+
+      <div class="mt-14">
+        <h3 class="text-sm font-semibold mb-4" style="color:var(--sun-ink-soft);">Administrative &amp; Support Team</h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="admin-grid"></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+<!-- ======================= END ABOUT PAGE ======================= -->
+
+</main>
+
+<!-- ========================= FOOTER ========================= -->
+<footer style="background:var(--sun-deep);position:relative;overflow:hidden;">
+  <div class="decorative-ray" style="width:380px;height:380px;top:-180px;left:-140px;opacity:.12;"></div>
+  <div class="wrap container-px pt-16 pb-10 relative">
+    <div class="grid lg:grid-cols-[1.2fr_0.7fr_0.7fr_0.9fr] gap-12">
+      <div>
+        <span class="inline-flex items-center rounded-xl px-3 py-2" style="background:#fff;">
+          <img src="data:image/webp;base64,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" alt="Sunshine Physiotherapy logo" class="logo-mark" width="150" height="40">
+        </span>
+        <p class="text-white font-display text-xl mt-6">"Your Quality of Life is Our Concern."</p>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <button class="btn btn-lime btn-sm" id="footer-book-btn">Book Appointment</button>
+          <button class="btn btn-whatsapp btn-sm" id="footer-whatsapp-btn">WhatsApp Us</button>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-white font-semibold mb-4 text-sm uppercase tracking-wide" style="letter-spacing:.04em;">Navigation</h3>
+        <ul class="space-y-3 text-sm" style="color:#9FB0CE;">
+          <li class="m-hide"><a href="#services" data-route="/" data-anchor="services" class="hover:text-white">Services</a></li>
+          <li class="m-hide"><a href="#team" data-route="/" data-anchor="team" class="hover:text-white">Our Team</a></li>
+          <li><a href="#locations" data-route="/" data-anchor="locations" class="hover:text-white">Locations</a></li>
+          <li><a href="#/about" data-route="/about" class="hover:text-white">About</a></li>
+          <li><a href="#faq" data-route="/" data-anchor="faq" class="hover:text-white">FAQs</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-white font-semibold mb-4 text-sm uppercase tracking-wide" style="letter-spacing:.04em;">Locations</h3>
+        <ul class="space-y-3 text-sm" style="color:#9FB0CE;">
+          <li>Victoria Falls<br><span style="color:#6E80A3;">123 Chinotimba</span></li>
+          <li>Hwange<br><span style="color:#6E80A3;">45 Jason Moyo Street</span></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-white font-semibold mb-4 text-sm uppercase tracking-wide" style="letter-spacing:.04em;">Contact</h3>
+        <ul class="space-y-3 text-sm" style="color:#9FB0CE;">
+          <li>Phone: <span class="italic" style="color:#6E80A3;">coming soon</span></li>
+          <li>WhatsApp: <button id="footer-whatsapp-link" class="underline hover:text-white" style="color:#9FB0CE;">Message us</button></li>
+          <li>Email: <span class="italic" style="color:#6E80A3;">coming soon</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-14 pt-6 flex flex-col sm:flex-row justify-between gap-4 text-xs" style="border-top:1px solid rgba(255,255,255,.12);color:#6E80A3;">
+      <p>&copy; <span id="year"></span> Sunshine Physiotherapy. All rights reserved.</p>
+      <div class="flex gap-5">
+        <a href="#" class="hover:text-white">Privacy Policy</a>
+        <a href="#" class="hover:text-white">Accessibility</a>
+        <span>Victoria Falls · Hwange · Zimbabwe</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp button (all breakpoints) -->
+<button id="fab-whatsapp" class="btn-whatsapp" aria-label="Chat with Sunshine Physiotherapy on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.33 4.95L2 22l5.28-1.38a9.9 9.9 0 0 0 4.76 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.86 9.86 0 0 0 12.04 2z"/></svg>
+</button>
+
+<script>
+(function(){
+  "use strict";
+
+  function goBooking(){
+    if (window.BOOKING_URL) { window.open(window.BOOKING_URL, "_blank", "noopener"); }
+    else { navigateTo("/", "contact"); document.getElementById("fld-name")?.focus(); }
+  }
+  function goWhatsapp(){
+    if (window.WHATSAPP_URL) { window.open(window.WHATSAPP_URL, "_blank", "noopener"); }
+    else { navigateTo("/", "contact"); }
+  }
+  document.querySelectorAll("#nav-book-btn,.mobile-book-btn,#hero-book-btn,#booking-book-btn,#footer-book-btn").forEach(b=>b.addEventListener("click", goBooking));
+  document.querySelectorAll("#nav-whatsapp-btn,.mobile-whatsapp-btn,#hero-whatsapp-btn,#booking-whatsapp-btn,#footer-whatsapp-btn,#footer-whatsapp-link,#fab-whatsapp,#story-whatsapp-btn").forEach(b=>b.addEventListener("click", goWhatsapp));
+
+  const toggle = document.getElementById("mobile-toggle");
+  const menu = document.getElementById("mobile-menu");
+  toggle.addEventListener("click", ()=>{
+    const open = menu.classList.contains("hidden");
+    menu.classList.toggle("hidden");
+    toggle.setAttribute("aria-expanded", String(open));
+  });
+  document.querySelectorAll(".mobile-link").forEach(l=>l.addEventListener("click", ()=> menu.classList.add("hidden")));
+
+  const mobileMQ = window.matchMedia("(max-width:767px)");
+  const MOVED = ["services","team","recovery"];
+  function navigateTo(route, anchor){
+    if (mobileMQ.matches && MOVED.includes(anchor)) route = "/about";
+    const pages = {"/": "page-home", "/about": "page-about"};
+    Object.values(pages).forEach(id=>document.getElementById(id).classList.remove("active"));
+    document.getElementById(pages[route] || "page-home").classList.add("active");
+    document.title = route === "/about" ? "About Us — Sunshine Physiotherapy" : "Sunshine Physiotherapy | Physiotherapy in Victoria Falls & Hwange";
+    window.scrollTo(0,0);
+    if (anchor){
+      requestAnimationFrame(()=>{
+        const el = document.getElementById(anchor);
+        if (el) el.scrollIntoView({behavior:"smooth", block:"start"});
+      });
+    }
+  }
+  document.querySelectorAll("[data-route]").forEach(a=>{
+    a.addEventListener("click", (e)=>{
+      const route = a.getAttribute("data-route");
+      const anchor = a.getAttribute("data-anchor");
+      e.preventDefault();
+      history.pushState({}, "", route === "/about" ? "#/about" : (anchor ? "#/#"+anchor : "#/"));
+      navigateTo(route, anchor);
+    });
+  });
+  function routeFromHash(){ return location.hash.startsWith("#/about") ? "/about" : "/"; }
+  window.addEventListener("popstate", ()=> navigateTo(routeFromHash()));
+  navigateTo(routeFromHash());
+
+  /* On mobile, Services / Team / Recovery live inside the About page */
+  (function(){
+    const container = document.getElementById("about-mobile-sections");
+    const items = MOVED.map(id=>{
+      const el = document.getElementById(id);
+      const marker = document.createElement("span");
+      marker.hidden = true;
+      el.parentNode.insertBefore(marker, el);
+      return {el, marker};
+    });
+    function place(){
+      items.forEach(({el, marker})=>{
+        if (mobileMQ.matches) container.appendChild(el);
+        else marker.parentNode.insertBefore(el, marker.nextSibling);
+      });
+    }
+    place();
+    mobileMQ.addEventListener("change", place);
+  })();
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const ICONS = {
+    spine:'<path d="M12 2v20M8 6h8M8 12h8M8 18h8"/>',
+    knee:'<circle cx="12" cy="12" r="4"/><path d="M12 2v6M12 16v6"/>',
+    run:'<circle cx="15" cy="5" r="2"/><path d="M14 8l-3 4 3 2-1 6M8 14l3-2M4 20l4-4 4 2"/>',
+    bandage:'<path d="M4 12a8 8 0 0 1 16 0 8 8 0 0 1-16 0z"/><path d="M9 9l6 6M9 15l6-6" stroke-dasharray="1.5 2"/>',
+    brain:'<path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-1 5.8A3 3 0 0 0 8 17a3 3 0 0 0 5.8 1A3 3 0 0 0 17 12a3 3 0 0 0-1-5.8A3 3 0 0 0 12 3a3 3 0 0 0-3 1z"/>',
+    walk:'<circle cx="13" cy="4" r="2"/><path d="M9 20l2-6-3-2 1-5 4 1 2 3h3M8 12l-3 2 1 6"/>',
+    clipboard:'<rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1M9 11h6M9 15h6"/>',
+    heart:'<path d="M12 20s-7-4.6-9.5-9C.9 7.3 3 3.5 7 3.5c2.4 0 4 1.6 5 3 1-1.4 2.6-3 5-3 4 0 6.1 3.8 4.5 7.5C19 15.4 12 20 12 20z"/>',
+    hands:'<path d="M8 12V6a2 2 0 1 1 4 0v5M12 11V4a2 2 0 1 1 4 0v7M16 10V6a2 2 0 1 1 4 0v7c0 4-3 7-7 7h-1c-3 0-4-1.5-5.5-4L4 11.5a1.6 1.6 0 0 1 2.5-2L8 11"/>',
+    activity:'<path d="M3 12h4l2-7 4 14 2-7h6"/>',
+    trophy:'<path d="M8 4h8v4a4 4 0 0 1-8 0V4z"/><path d="M8 4H5a3 3 0 0 0 3 3M16 4h3a3 3 0 0 1-3 3M9 18h6M10 14v4M14 14v4"/>',
+    target:'<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r=".5"/>',
+    layers:'<path d="M12 3 2 8l10 5 10-5-10-5zM2 16l10 5 10-5M2 12l10 5 10-5"/>',
+    user:'<circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-5 5-7 8-7s6.5 2 8 7"/>',
+    pin:'<path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/>',
+    clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/>',
+    quote:'<path d="M7 7h4v6H7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zM15 7h4v6h-4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2z"/>'
+  };
+  function icon(name, cls){
+    return `<svg class="${cls||''}" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${ICONS[name]||ICONS.activity}</svg>`;
+  }
+
+  /* ---------------- Discovery cards ---------------- */
+  const discover = [
+    {icon:"spine", title:"Back &amp; Neck Pain", text:"Assessment and treatment to reduce pain, restore movement and improve everyday function."},
+    {icon:"knee", title:"Knee &amp; Joint Pain", text:"Individualized care to improve joint movement, strength and stability."},
+    {icon:"run", title:"Sports &amp; Exercise Injuries", text:"Rehabilitation to help you recover safely and return to activity."},
+    {icon:"bandage", title:"Post-Surgery Rehabilitation", text:"Guided rehabilitation to restore strength, mobility and confidence after surgery."},
+    {icon:"brain", title:"Stroke &amp; Neurological Rehabilitation", text:"Structured support to rebuild movement and function after a neurological event."},
+    {icon:"walk", title:"Mobility &amp; Movement Problems", text:"Practical, personalized help to move more freely and confidently."}
+  ];
+  document.getElementById("discover-grid").innerHTML = discover.map(c=>`
+    <div class="discover-card card p-6" id="discover-${c.title.replace(/[^a-z]+/gi,'-').toLowerCase()}">
+      <div class="icon-tile mb-4" style="background:var(--sun-surface-tint);color:var(--sun-blue);">${icon(c.icon)}</div>
+      <h3 class="font-semibold text-lg" style="color:var(--sun-deep);">${c.title}</h3>
+      <p class="mt-2 text-sm leading-relaxed" style="color:var(--sun-ink-soft);">${c.text}</p>
+      <a href="#services" data-route="/" data-anchor="services" class="btn-text mt-4 m-hide">Learn more <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>`).join("");
+  document.querySelectorAll('#discover-grid [data-route]').forEach(a=>{
+    a.addEventListener("click",(e)=>{
+      const route=a.getAttribute("data-route"), anchor=a.getAttribute("data-anchor");
+      e.preventDefault();
+      history.pushState({}, "", anchor?"#/#"+anchor:"#/");
+      navigateTo(route, anchor);
+    });
+  });
+
+  /* ---------------- Services ---------------- */
+  const services = [
+    {icon:"clipboard", title:"Assessment &amp; Diagnosis", text:"A thorough evaluation of your movement, pain and function to guide your plan."},
+    {icon:"heart", title:"Pain Management", text:"Individualized strategies to reduce pain and support daily activity."},
+    {icon:"hands", title:"Manual Therapy", text:"Hands-on techniques to ease stiffness and restore movement."},
+    {icon:"activity", title:"Exercise Rehabilitation", text:"Structured exercise programmes matched to your recovery stage."},
+    {icon:"bandage", title:"Post-Surgical Rehabilitation", text:"Guided recovery to rebuild strength and function after surgery."},
+    {icon:"trophy", title:"Sports Rehabilitation", text:"Safe, staged return-to-sport programmes for active patients."},
+    {icon:"brain", title:"Neurological Rehabilitation", text:"Support for movement and function after neurological conditions."},
+    {icon:"walk", title:"Mobility &amp; Functional Training", text:"Practical training to move confidently in everyday life."}
+  ];
+  document.getElementById("services-grid").innerHTML = services.map(s=>`
+    <div class="card shadow-soft p-5">
+      <div class="icon-tile mb-3" style="background:#EEF3FB;color:var(--sun-blue);">${icon(s.icon)}</div>
+      <h3 class="font-semibold" style="color:var(--sun-deep);">${s.title}</h3>
+      <p class="mt-2 text-sm leading-relaxed" style="color:var(--sun-ink-soft);">${s.text}</p>
+    </div>`).join("");
+
+  /* ---------------- Why choose us ---------------- */
+  const why = [
+    {icon:"target", title:"Personalised Treatment", text:"Your treatment plan is built around your assessment, goals and daily life."},
+    {icon:"clipboard", title:"Evidence-Based Practice", text:"Treatment decisions are guided by current physiotherapy practice and your individual needs."},
+    {icon:"activity", title:"Continuity of Care", text:"Your recovery doesn't stop when you leave the clinic. We track your progress throughout your journey."},
+    {icon:"heart", title:"Patient-Centred Care", text:"We don't just treat the injury. We help you get back to the activities and life that matter to you."},
+    {icon:"pin", title:"Two Convenient Locations", text:"Access Sunshine Physiotherapy in Victoria Falls and Hwange."}
+  ];
+  document.getElementById("why-grid").innerHTML = why.map(w=>`
+    <div class="p-6 rounded-xl" style="background:var(--sun-surface-tint);">
+      <div class="icon-tile mb-3" style="background:var(--sun-white);color:var(--sun-lime-dark);">${icon(w.icon)}</div>
+      <h3 class="font-semibold" style="color:var(--sun-deep);">${w.title}</h3>
+      <p class="mt-2 text-sm leading-relaxed" style="color:var(--sun-ink-soft);">${w.text}</p>
+    </div>`).join("");
+
+  /* ---------------- Team ---------------- */
+  const team = [
+    {id:"sharon", name:"Sharon Vushoma", location:"Victoria Falls", interest:"Orthopaedic Physiotherapy"},
+    {id:"rumbidzai", name:"Rumbidzai Chikore", location:"Hwange", interest:"Sports Rehabilitation"},
+    {id:"tinashe", name:"Tinashe Nyathi", location:"Hwange", interest:"Neurological Rehabilitation"},
+    {id:"chipo", name:"Chipo Ncube", location:"Victoria Falls", interest:"Women's Health Physiotherapy"}
+  ];
+  function teamCard(t, prefix){
+    prefix = prefix || "";
+    return `<div class="card shadow-soft overflow-hidden flex flex-col">
+      <div class="photo-placeholder aspect-square">
+        ${icon("user")}
+        <span class="absolute top-3 left-3 text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1" style="background:var(--sun-white);color:var(--sun-deep);border:1px solid var(--sun-border);">${icon("pin","w-3 h-3")}${t.location}</span>
+      </div>
+      <div class="p-5 flex flex-col flex-1">
+        <h3 class="font-semibold text-lg" style="color:var(--sun-deep);">${t.name}</h3>
+        <p class="text-sm font-medium" style="color:var(--sun-blue);">Physiotherapist</p>
+        <span class="inline-block mt-2 text-xs font-medium px-2.5 py-1 rounded-full self-start" style="background:var(--sun-surface-tint);color:var(--sun-ink-soft);">${t.interest}</span>
+        <button class="btn-text mt-4 self-start" data-team-toggle="${t.id}" aria-expanded="false" aria-controls="bio-${prefix}${t.id}">View Profile <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" class="chev"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="team-bio-panel" id="bio-${prefix}${t.id}">
+          <div><p class="text-sm mt-3 leading-relaxed" style="color:var(--sun-ink-soft);">Full biography and qualifications for ${t.name} are being added. In the meantime, you're welcome to ask about ${t.name.split(" ")[0]}'s experience directly.</p>
+          <button class="btn btn-whatsapp btn-sm mt-3 team-ask-whatsapp">Ask via WhatsApp</button></div>
+        </div>
+      </div>
+    </div>`;
+  }
+  document.getElementById("team-grid").innerHTML = team.map(t=>teamCard(t)).join("");
+  document.getElementById("about-clinical-grid").innerHTML = team.map(t=>teamCard(t,"about-")).join("");
+  document.querySelectorAll("[data-team-toggle]").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      const expanded = btn.getAttribute("aria-expanded")==="true";
+      btn.setAttribute("aria-expanded", String(!expanded));
+      document.getElementById(btn.getAttribute("aria-controls")).classList.toggle("open", !expanded);
+    });
+  });
+  document.querySelectorAll(".team-ask-whatsapp").forEach(b=>b.addEventListener("click", goWhatsapp));
+
+  /* ---------------- Milestones ---------------- */
+  const milestones = [
+    {label:"Initial Assessment", status:"done"},
+    {label:"Treatment Started", status:"done"},
+    {label:"Mobility Improved", status:"done"},
+    {label:"Pain Reduced", status:"active"},
+    {label:"Functional Goal Achieved", status:"pending"}
+  ];
+  document.getElementById("milestones-grid").innerHTML = milestones.map((m,i)=>{
+    const color = m.status==="done" ? "#84CC16" : (m.status==="active" ? "#2563EB" : "var(--sun-border)");
+    const textColor = m.status==="pending" ? "var(--sun-ink-soft)" : "var(--sun-deep)";
+    const badge = m.status==="done" ? "Complete" : (m.status==="active" ? "In progress" : "Upcoming");
+    return `<div class="text-center">
+      <div class="w-10 h-10 rounded-full mx-auto flex items-center justify-center font-semibold text-sm" style="background:${color};color:${m.status==='pending'?'var(--sun-ink-soft)':'#fff'};">${i+1}</div>
+      <p class="text-xs font-semibold mt-2" style="color:${textColor};">${m.label}</p>
+      <p class="text-[11px] mt-1" style="color:var(--sun-ink-soft);">${badge}</p>
+    </div>`;
+  }).join("");
+
+  /* ---------------- Locations ---------------- */
+  const locations = [
+    {name:"Victoria Falls Clinic", city:"Victoria Falls", address:"123 Chinotimba", team:["sharon","chipo"]},
+    {name:"Hwange Clinic", city:"Hwange", address:"45 Jason Moyo Street", team:["rumbidzai","tinashe"]}
+  ];
+  const serviceTagsByLoc = ["Assessment &amp; Diagnosis","Manual Therapy","Exercise Rehabilitation","Pain Management"];
+  document.getElementById("locations-grid").innerHTML = locations.map(l=>{
+    const members = team.filter(t=>l.team.includes(t.id)).map(t=>t.name).join(", ");
+    return `<div class="card shadow-soft overflow-hidden flex flex-col">
+      <div class="photo-placeholder" style="aspect-ratio:16/8;border-radius:0;border:none;border-bottom:1px solid var(--sun-border);">
+        ${icon("pin")}
+        <span class="ph-tag">${l.name} photo — coming soon</span>
+      </div>
+      <div class="p-6 flex flex-col flex-1">
+        <h3 class="font-semibold text-xl" style="color:var(--sun-deep);">${l.name}</h3>
+        <p class="text-sm mt-1 flex items-center gap-1.5" style="color:var(--sun-ink-soft);">${icon("pin","w-4 h-4")}${l.address}, ${l.city}, Zimbabwe</p>
+
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="badge-coming-soon">${icon("clock","w-3.5 h-3.5")}Hours coming soon</span>
+          <span class="badge-coming-soon">Phone coming soon</span>
+        </div>
+
+        <div class="mt-5">
+          <p class="text-xs font-semibold uppercase tracking-wide" style="color:var(--sun-ink-soft);letter-spacing:.04em;">Physiotherapists here</p>
+          <p class="text-sm mt-1.5" style="color:var(--sun-deep);">${members}</p>
+        </div>
+
+        <div class="mt-4">
+          <p class="text-xs font-semibold uppercase tracking-wide" style="color:var(--sun-ink-soft);letter-spacing:.04em;">Services available</p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            ${serviceTagsByLoc.map(s=>`<span class="text-xs font-medium px-2.5 py-1 rounded-full" style="background:var(--sun-surface-tint);color:var(--sun-ink-soft);">${s}</span>`).join("")}
+          </div>
+        </div>
+
+        <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-2">
+          <a href="https://www.google.com/maps/search/${encodeURIComponent(l.name + ' ' + l.city)}" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Get Directions</a>
+          <button class="btn btn-whatsapp btn-sm loc-whatsapp-btn">WhatsApp</button>
+          <button class="btn btn-primary btn-sm loc-book-btn">Book</button>
+        </div>
+      </div>
+    </div>`;
+  }).join("");
+  document.querySelectorAll(".loc-whatsapp-btn").forEach(b=>b.addEventListener("click", goWhatsapp));
+  document.querySelectorAll(".loc-book-btn").forEach(b=>b.addEventListener("click", goBooking));
+
+  /* ---------------- FAQ ---------------- */
+  const faqs = [
+    {q:"What should I expect during my first physiotherapy appointment?", a:"Your physiotherapist will review your history, assess your movement and discuss your goals before outlining a personalised treatment plan."},
+    {q:"Do I need a referral to see a physiotherapist?", a:"In most cases you can book directly without a doctor's referral. If your medical aid requires one, we can help you understand what's needed."},
+    {q:"What should I wear to my appointment?", a:"Comfortable, loose-fitting clothing that allows easy movement of the area being assessed or treated, along with suitable footwear."},
+    {q:"How long does a physiotherapy session take?", a:"Session length varies depending on your treatment plan. Your physiotherapist will confirm expected timing when you book."},
+    {q:"How many sessions will I need?", a:"This depends on your condition and goals. Your physiotherapist will discuss an expected number of sessions after your first assessment."},
+    {q:"Do you treat sports injuries?", a:"Yes. Our team supports athletes and active patients with rehabilitation designed to help them recover safely and return to their sport."},
+    {q:"Do you offer post-surgery rehabilitation?", a:"Yes. We work with patients recovering from surgery to help rebuild strength, mobility and everyday function."},
+    {q:"Which Sunshine clinic should I visit?", a:"Choose whichever clinic — Victoria Falls or Hwange — is more convenient for you. If you're unsure, message us on WhatsApp and we'll help you decide."},
+    {q:"Can I contact Sunshine through WhatsApp?", a:"Yes — use the WhatsApp button anywhere on this site to message us directly."}
+  ];
+  document.getElementById("faq-list").innerHTML = faqs.map((f,i)=>`
+    <div class="card overflow-hidden">
+      <h3>
+        <button class="accordion-btn w-full flex items-center justify-between gap-4 p-5 text-left font-semibold" style="color:var(--sun-deep);" aria-expanded="false" aria-controls="faq-panel-${i}" id="faq-btn-${i}">
+          <span>${f.q}</span>
+          <svg class="chev shrink-0 transition-transform duration-300" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+      </h3>
+      <div class="accordion-panel" id="faq-panel-${i}" role="region" aria-labelledby="faq-btn-${i}">
+        <div><p class="px-5 pb-5 text-sm leading-relaxed" style="color:var(--sun-ink-soft);">${f.a}</p></div>
+      </div>
+    </div>`).join("");
+  document.querySelectorAll(".accordion-btn").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      const expanded = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", String(!expanded));
+      document.getElementById(btn.getAttribute("aria-controls")).classList.toggle("open", !expanded);
+    });
+  });
+
+  /* ---------------- Core Values (About page) ---------------- */
+  const values = [
+    {icon:"heart", title:"Compassion", text:"We treat every patient with empathy, patience, and respect."},
+    {icon:"clipboard", title:"Clinical Excellence", text:"Care grounded in sound assessment and current physiotherapy practice."},
+    {icon:"user", title:"Patient-Centred", text:"Treatment plans built around each patient's life and goals."},
+    {icon:"target", title:"Accountability", text:"We track progress honestly and adjust care as needed."}
+  ];
+  document.getElementById("values-grid").innerHTML = values.map(v=>`
+    <div class="card shadow-soft p-6">
+      <div class="icon-tile mb-3" style="background:var(--sun-surface-tint);color:var(--sun-blue);">${icon(v.icon)}</div>
+      <h3 class="font-semibold" style="color:var(--sun-deep);">${v.title}</h3>
+      <p class="mt-2 text-sm leading-relaxed" style="color:var(--sun-ink-soft);">${v.text}</p>
+    </div>`).join("");
+
+  function placeholderCard(role){
+    return `<div class="card p-6" style="border-style:dashed;">
+      <div class="icon-tile mb-3" style="background:var(--sun-surface-tint);color:var(--sun-ink-soft);">${icon("user")}</div>
+      <p class="font-semibold" style="color:var(--sun-ink-soft);">${role}</p>
+      <p class="text-xs mt-1" style="color:var(--sun-ink-soft);">Profile to be added once organisational details are confirmed.</p>
+    </div>`;
+  }
+  document.getElementById("leadership-grid").innerHTML = ["Clinic Director", "Head of Clinical Services", "Operations Lead"].map(placeholderCard).join("");
+  document.getElementById("admin-grid").innerHTML = ["Front Desk &amp; Patient Coordination", "Administration"].map(placeholderCard).join("");
+
+  /* ---------------- Pain chart ---------------- */
+  (function(){
+    const data = [8,7,6.5,6,5,4,3,2];
+    const w=560,h=200,pad=28,maxV=10;
+    const stepX=(w-pad*2)/(data.length-1);
+    const pts = data.map((v,i)=>[pad+i*stepX, pad+(h-pad*2)*(1-v/maxV)]);
+    const path = "M" + pts.map(p=>p.join(",")).join(" L ");
+    const area = path + ` L ${pts[pts.length-1][0]},${h-pad} L ${pts[0][0]},${h-pad} Z`;
+    let svg = `<defs><linearGradient id="painGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#2563EB" stop-opacity="0.2"/>
+        <stop offset="100%" stop-color="#2563EB" stop-opacity="0"/>
+      </linearGradient></defs>`;
+    for(let g=0; g<=4; g++){
+      const y = pad + (h-pad*2)*g/4;
+      svg += `<line x1="${pad}" y1="${y}" x2="${w-pad}" y2="${y}" stroke="var(--sun-border)" stroke-width="1"/>`;
+    }
+    svg += `<path d="${area}" fill="url(#painGrad)" stroke="none"/>`;
+    svg += `<path d="${path}" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>`;
+    pts.forEach((p,i)=>{
+      const color = i===pts.length-1 ? "#84CC16" : "#2563EB";
+      svg += `<circle cx="${p[0]}" cy="${p[1]}" r="${i===pts.length-1?6:4}" fill="${color}"/>`;
+    });
+    document.getElementById("pain-chart").innerHTML = svg;
+  })();
+
+  /* ---------------- KPI ring ---------------- */
+  (function(){
+    const target = 72;
+    const circle = document.getElementById("kpi-circle");
+    const label = document.getElementById("kpi-label");
+    const circumference = 364;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce){
+      circle.style.strokeDashoffset = circumference * (1 - target/100);
+      label.textContent = target + "%";
+      return;
+    }
+    let obs = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          circle.style.strokeDashoffset = circumference * (1 - target/100);
+          let cur=0;
+          const t = setInterval(()=>{
+            cur+=2;
+            if(cur>=target){cur=target; clearInterval(t);}
+            label.textContent = cur+"%";
+          },18);
+          obs.disconnect();
+        }
+      });
+    },{threshold:.4});
+    obs.observe(circle);
+  })();
+
+  /* ---------------- Inquiry form ---------------- */
+  const form = document.getElementById("inquiry-form");
+  form.addEventListener("submit", (e)=>{
+    e.preventDefault();
+    if(!form.checkValidity()){ form.reportValidity(); return; }
+    document.getElementById("inquiry-form-wrap").classList.add("hidden");
+    document.getElementById("inquiry-success").classList.remove("hidden");
+  });
+  document.getElementById("inquiry-reset").addEventListener("click", ()=>{
+    form.reset();
+    document.getElementById("inquiry-success").classList.add("hidden");
+    document.getElementById("inquiry-form-wrap").classList.remove("hidden");
+  });
+
+})();
+</script>
+</body>
+</html>
